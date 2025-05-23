@@ -1,10 +1,15 @@
-# Define the variables
-principal = 1000     # This is the initial amount of money
-rate = 0.05          # This is the interest rate (5%)
-time = 3             # This is the time in years
+# Prompt the user for monthly income and expenses
+monthly_income = float(input("Enter your monthly income: "))
+monthly_expenses = float(input("Enter your total monthly expenses: "))
 
-# Calculate simple interest
-interest = principal * rate * time
+# Calculate monthly savings
+monthly_savings = monthly_income - monthly_expenses
 
-# Print the result
-print("The simple interest is:", interest)
+# Project annual savings with 5% interest
+annual_savings = monthly_savings * 12
+interest = annual_savings * 0.05
+projected_savings = annual_savings + interest
+
+# Print the results
+print("Your monthly savings are $" + str(monthly_savings) + ".")
+print("Projected savings after one year, with interest, is: $" + str(projected_savings) + ".")
